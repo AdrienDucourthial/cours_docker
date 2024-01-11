@@ -31,3 +31,31 @@ Trouver le nombre de personnes de plus de 30 ans.
 ````
 PS : merci d'utiliser ton cerveau et non ChatGPT.
 ````
+
+# Reponse 
+
+1. Ecrire le Dockerfile
+
+2. run 
+```bash
+docker build -t exo5:v1 .
+```
+
+3. run 
+```bash
+docker run --name postgre -d  exo5:v1
+```
+
+4. run 
+```bash
+docker exec -it postgre bash
+```
+
+5. use following commands in console
+```bash
+psql -U postgres -d db
+```
+```sql
+SELECT count(*) FROM personnes WHERE age >= 30;
+```
+-> 58
