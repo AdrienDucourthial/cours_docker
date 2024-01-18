@@ -11,3 +11,10 @@ Oui, je te vois venir
  "Moi je connais le C++, je go le Python, je n'aime pas si et je n'aime pas ça...""
 
 🤷‍♂️ Manque de bol, l'applicatif n'est pas important. Savoir mettre en place un environnement Docker est le sujet. 😉
+
+## Reponse
+
+J'en sais rien ca me saoule.
+J'ai le back qui crash pcq il connait pas le user doc.
+J'imagine que du coup il doit pas voir la bdd mais je sais pa pourquoi
+Je trouve pas de réponse, je me casse.
