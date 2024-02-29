@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    container_name: exo7_back
+    working_dir: /app
+    volumes:
+      - ./back:/app
+    ports:
+      - "3021:5000"
+    depends_on:
+      - database
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: doc
+      POSTGRES_PASSWORD: doc
+      POSTGRES_DB: doc
+
+  database:
+      image: postgres:latest
+      container_name: exo7_db
+      environment:
+        POSTGRES_USER: doc
+        POSTGRES_PASSWORD: doc
+        POSTGRES_DB: doc
+      ports:
+        - "5433:5432"
+      volumes:
+        - ./pgdata/db.sql:/docker-entrypoint-initdb.d/db.sql
+
+  frontend:
+    build: ./front
+    container_name: exo7_front
+    volumes:
+      - ./front:/usr/share/nginx/html
+    ports:
+      - "80:80"

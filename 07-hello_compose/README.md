@@ -14,7 +14,3 @@ Oui, je te vois venir
 
 ## Reponse
 
-J'en sais rien ca me saoule.
-J'ai le back qui crash pcq il connait pas le user doc.
-J'imagine que du coup il doit pas voir la bdd mais je sais pa pourquoi
-Je trouve pas de réponse, je me casse.
