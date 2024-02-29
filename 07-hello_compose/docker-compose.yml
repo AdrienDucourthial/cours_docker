@@ -7,12 +7,13 @@ services:
     working_dir: /app
     volumes:
       - ./back:/app
+      - /app/node_modules
     ports:
       - "3021:5000"
     depends_on:
       - database
     environment:
-      POSTGRES_HOST: postgres
+      POSTGRES_HOST: exo7_db
       POSTGRES_PORT: 5432
       POSTGRES_USER: doc
       POSTGRES_PASSWORD: doc
